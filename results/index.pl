@@ -135,16 +135,14 @@ compared to the rest of the sample.
 
 The script expects the following POST variables:
 
-=over 4
+=over
 
-=item *
-
-=head3 profile
+=item * profile
 
 The public_id of the current user. Failure to provide this will cause the script
 to load the login template.
 
-=head3 trait
+=item * trait
 
 The trait_id for the trait to be viewed.
 

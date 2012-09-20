@@ -142,9 +142,9 @@ calls that affect this trait.
 
 The script expects the following POST variables:
 
-=over 4
+=over
 
-=item [barcode|profile]
+=item * [barcode|profile]
 
 Either an encrypted barcode submission, or a public_id.
 If neither key resolves to a user in the database, the user will be returned
