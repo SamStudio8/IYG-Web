@@ -55,8 +55,8 @@ CREATE  TABLE IF NOT EXISTS `iyg`.`variants` (
   CONSTRAINT `snp_id`
     FOREIGN KEY (`snp_id` )
     REFERENCES `iyg`.`snps` (`snp_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = latin1;
@@ -82,13 +82,13 @@ CREATE  TABLE IF NOT EXISTS `iyg`.`results` (
   CONSTRAINT `profile_id`
     FOREIGN KEY (`profile_id` )
     REFERENCES `iyg`.`profiles` (`profile_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `result_variant_id`
     FOREIGN KEY (`variant_id` )
     REFERENCES `iyg`.`variants` (`variant_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = latin1;
@@ -133,13 +133,13 @@ CREATE  TABLE IF NOT EXISTS `iyg`.`variants_traits` (
   CONSTRAINT `trait_id`
     FOREIGN KEY (`trait_id` )
     REFERENCES `iyg`.`traits` (`trait_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
+    ON DELETE CASCADE
+    ON UPDATE CASCADE,
   CONSTRAINT `variant_id`
     FOREIGN KEY (`variant_id` )
     REFERENCES `iyg`.`variants` (`variant_id` )
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
+    ON DELETE CASCADE
+    ON UPDATE CASCADE)
 ENGINE = InnoDB
 AUTO_INCREMENT = 1
 DEFAULT CHARACTER SET = latin1;
